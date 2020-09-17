@@ -1,0 +1,30 @@
+1.基本模板
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">图片或者容器</div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <!--分页器。如果放置在swiper-container外面，需要自定义样式。-->
+
+    <div class="swiper-button-prev"></div>
+    <!--左箭头。如果放置在swiper-container外面，需要自定义样式。-->
+    <div class="swiper-button-next"></div>
+    <!--右箭头。如果放置在swiper-container外面，需要自定义样式。-->
+
+    <!-- 修改箭头颜色示范 
+        <div class="swiper-button-next swiper-button-white"></div> 
+        <div class="swiper-button-next swiper-button-black"></div> 
+    -->
+</div>
+
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        autoplay: 5000,//可选选项，自动滑动
+        // 前进后退按钮
+        prevButton: '.swiper-button-prev',
+        nextButton: '.swiper-button-next',
+        // 解决前进后退按钮点击后自动播放不执行
+        paginationClickable: true,
+        autoplayDisableOnInteraction: false,
+    })
+</script>
